@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab_10/Home.dart';
 
 import '../component/question.dart';
 
@@ -15,34 +16,26 @@ class _QuizState extends State<Quiz> {
     return DefaultTabController(
         length: 6,
         child: Scaffold(
+          floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+          floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.exit_to_app),
+            onPressed: (() {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return Home();
+              }));
+            }),
+          ),
           appBar: AppBar(
             bottom: TabBar(tabs: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.question_answer),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.question_answer),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.question_answer),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.question_answer),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.question_answer),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.question_answer),
-              ),
+              Icon(Icons.question_mark_sharp),
+              Icon(Icons.question_mark_sharp),
+              Icon(Icons.question_mark_sharp),
+              Icon(Icons.question_mark_sharp),
+              Icon(Icons.question_mark_sharp),
+              Icon(Icons.question_mark_sharp),
             ]),
-            title: Text("Quiz App"),
+            title: Text("Brain Test"),
+            centerTitle: true,
           ),
           body: TabBarView(children: [
             Qus(
@@ -71,28 +64,29 @@ class _QuizState extends State<Quiz> {
                 qus_text: "Which is a synonym of perfidy?"),
             Qus(
                 qnumber: 4,
-                answer: "favorable",
-                answer_1: "custody",
-                answer_2: "betrayal",
-                answer_3: "quality",
-                answer_4: "information",
-                qus_text: "Which is a synonym of perfidy?"),
+                answer: "s++",
+                answer_1: "c++",
+                answer_2: "Pytoh",
+                answer_3: "s++",
+                answer_4: "dart",
+                qus_text:
+                    "One of the following is not a progaramming languge:"),
             Qus(
                 qnumber: 5,
-                answer: "favorable",
-                answer_1: "custody",
-                answer_2: "betrayal",
-                answer_3: "quality",
-                answer_4: "information",
-                qus_text: "Which is a synonym of perfidy?"),
+                answer: "7 continents",
+                answer_1: "6 continents",
+                answer_2: "7 continents",
+                answer_3: "8 continents",
+                answer_4: "5 continents",
+                qus_text: "How many continents are there in the world?"),
             Qus(
                 qnumber: 6,
-                answer: "favorable",
-                answer_1: "custody",
-                answer_2: "betrayal",
-                answer_3: "quality",
-                answer_4: "information",
-                qus_text: "Which is a synonym of perfidy?"),
+                answer: "ofcourse",
+                answer_1: "Nah!!",
+                answer_2: "Not that much",
+                answer_3: "Yes",
+                answer_4: "ofcourse",
+                qus_text: "Have you enjoyed this quizz ?"),
           ]),
         ));
   }

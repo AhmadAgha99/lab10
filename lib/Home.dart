@@ -12,9 +12,7 @@ class Home extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                fit: BoxFit.fill,
-                image: NetworkImage(
-                    "https://image.freepik.com/free-photo/flat-lay-workplace-arrangement-purple-background-with-copy-space_23-2148404535.jpg"))),
+                fit: BoxFit.cover, image: AssetImage("images/2.jpg"))),
         child: Center(
           child: GestureDetector(
             onTap: () {
@@ -40,13 +38,36 @@ class Home extends StatelessWidget {
                     );
                   });
             },
-            child: SizedBox(
-              height: 250,
-              width: 200,
-              child: Text(
-                "Do you think you are good in english press me if yes:)",
-                style: TextStyle(fontSize: 25),
-              ),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 400,
+                ),
+                Icon(
+                  shadows: <Shadow>[
+                    Shadow(
+                      offset: Offset(10.0, 10.0),
+                      blurRadius: 3.0,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                    Shadow(
+                      offset: Offset(10.0, 10.0),
+                      blurRadius: 2.0,
+                      color: Color.fromARGB(123, 104, 104, 247),
+                    ),
+                  ],
+                  color: Colors.blue,
+                  Icons.play_circle,
+                  size: 100,
+                ),
+                Text(
+                  "Lets play!",
+                  style: TextStyle(
+                      fontSize: 40,
+                      color: Colors.blueAccent,
+                      fontFamily: "RubikDirt"),
+                ),
+              ],
             ),
           ),
         ),

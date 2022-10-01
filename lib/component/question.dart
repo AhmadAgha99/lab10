@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab_10/Home.dart';
 
 class Qus extends StatelessWidget {
   Qus({
@@ -24,40 +25,44 @@ class Qus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromARGB(255, 6, 33, 57),
+      color: Colors.white,
       child: ListView(
         children: [
           Image(
-            image: AssetImage("images/1.png"),
+            image: AssetImage("images/1.jpg"),
             height: 200,
             width: 200,
           ),
           Text(
             "Question No.$qnumber",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            style: TextStyle(color: Colors.blueAccent, fontSize: 20),
           ),
           Divider(
-            color: Colors.white,
+            color: Colors.blueAccent,
             thickness: 2,
           ),
           Container(
             alignment: Alignment.center,
-            height: 120,
+            height: 80,
             child: Text(
               "$qus_text",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
-                  color: Colors.white),
+                  color: Colors.blueAccent),
             ),
           ),
           GestureDetector(
             child: Container(
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: Colors.amber),
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.blueAccent),
               height: 50,
-              child: Text("$answer_1"),
+              child: Text(
+                "$answer_1",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
             ),
             onTap: () {
               if (answer_1 == answer) {
@@ -91,9 +96,11 @@ class Qus extends StatelessWidget {
               height: 50,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: Colors.amber),
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.blueAccent),
               child: Text(
                 "$answer_2",
+                style: TextStyle(fontSize: 25, color: Colors.white),
               ),
             ),
             onTap: () {
@@ -128,8 +135,12 @@ class Qus extends StatelessWidget {
               height: 50,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: Colors.amber),
-              child: Text("$answer_3"),
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.blueAccent),
+              child: Text(
+                "$answer_3",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
             ),
             onTap: () {
               if (answer_3 == answer) {
@@ -163,8 +174,12 @@ class Qus extends StatelessWidget {
               height: 50,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: Colors.amber),
-              child: Text("$answer_4"),
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.blueAccent),
+              child: Text(
+                "$answer_4",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
             ),
             onTap: () {
               if (answer_4 == answer) {
