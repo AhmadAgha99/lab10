@@ -35,7 +35,7 @@ class _QuizState extends State<Quiz> {
               Icon(Icons.question_mark_sharp),
               Icon(Icons.question_mark_sharp),
             ]),
-            title: Text("Brain Test"),
+            title: Text("Test"),
             centerTitle: true,
           ),
           body: TabBarView(children: [
