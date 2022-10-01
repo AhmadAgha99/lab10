@@ -26,6 +26,7 @@ class _QuizState extends State<Quiz> {
             }),
           ),
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             bottom: TabBar(tabs: [
               Icon(Icons.question_mark_sharp),
               Icon(Icons.question_mark_sharp),
